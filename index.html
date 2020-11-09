@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Documentación de CSS</title>
+</head>
+<body>
+
+    <nav id="navbar">
+        <header>CSS Documentación</header>
+        <ul>
+            <li><a href="#introduccion">Introducción a CSS</a></li>
+            <li><a href="#sintaxis">Sintaxis CSS</a></li>
+            <li><a href="#selectores">Selectores CSS</a></li>
+            <li><a href="#comentarios">Comentarios en CSS</a></li>
+            <li><a href="#fondo">Fondos en CSS (Backgrounds)</a></li>
+            <li><a href="#bordes">Bordes en CSS (Border)</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="introduccion">
+            <header>Introducción a CSS</header>
+                <article>
+                    <ul>
+                        <li>CSS son las siglas de Cascading Style Sheets (Hojas de Estilo en Cascada)</li>
+                        <li>El CSS describe cómo los elementos HTML deben ser mostrados en la pantalla, en el papel o en otros medios.</li>
+                        <li>El CSS ahorra mucho trabajo. Puede controlar el diseño de múltiples páginas web de una sola vez.</li>
+                        <li>Las hojas de estilo externas se almacenan en archivos CSS</li>
+                    </ul>
+
+                    <p>El CSS se utiliza para definir los estilos de las páginas web, incluyendo el diseño, la disposición y las variaciones en la visualización para diferentes dispositivos y tamaños de pantalla.</p>
+
+                    <p>Las definiciones de estilo se guardan normalmente en archivos externos .css.</p>
+
+                    <p>¡Con un archivo de hoja de estilo externo, puedes cambiar el aspecto de un sitio web entero cambiando sólo un archivo!</p>
+                </article>
+        </section>
+
+        <section class="main-section" id="sintaxis">
+            <header>Sintaxis de CSS</header>
+            <article>
+                <p>Un conjunto de reglas de CSS consiste en un selector y un bloque de declaración:</p>
+                <img src="./imagenes/reglacss.png" alt="imagen ejemplo regña css">
+
+                <p>El selector apunta al elemento HTML al que se quiere dar estilo.</p>
+                <p>El bloque de declaración contiene una o más declaraciones separadas por punto y coma.</p>
+                <p>Cada declaración incluye un nombre de propiedad CSS y un valor, separados por dos puntos.</p>
+                <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+
+                <p>En este ejemplo todos los elementos "<'p'>" estarán alineados en el centro, con un color de texto rojo:</p>
+
+                <code>
+                    p {
+                        color: red;
+                        text-align: center;
+                      }
+                </code>
+
+                <p>Ejemplo explicado:</p>
+
+                <ul>
+                    <li><span>p</span>  es un selector en CSS (apunta al elemento HTML al que se quiere dar estilo: "<'p'>")</li>
+                    <li><span>color</span>  es una propiedad, y el rojo es el valor de la propiedad</li>
+                    <li><span>text-align</span> es una propiedad, y el centro es el valor de la propiedad</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="selectores">
+            <header>Selectores de CSS</header>
+            <article>
+                <p>Los selectores CSS se usan para "encontrar" (o seleccionar) los elementos HTML a los que se quiere dar estilo.</p>
+                <p>Podemos dividir los selectores CSS en cinco categorías:</p>
+
+                <ul>
+                    <li>Seleccionadores simples (seleccionan elementos basados en el nombre, el id, la clase)</li>
+                    <li>Los selectores combinadores (seleccionan los elementos en base a una relación específica entre ellos)</li>
+                    <li> selectores de seudo-clase (seleccionan elementos basados en un cierto estado)</li>
+                    <li>selectores de Seudo-elementos  (seleccionan y estilizan una parte de un elemento)</li>
+                    <li>Seleccionadores de atributos (seleccionan elementos en base a un atributo o valor de atributo)</li>
+                </ul>
+
+                <p>El <span>selector de elementos</span> selecciona los elementos HTML basándose en el nombre del elemento.</p>
+
+                <p><span>Ejemplo:</span></p>
+
+                <p>Aquí, todos los elementos "<'p'>" de la página estarán alineados en el centro, con un color de texto rojo: </p>
+
+                <code>
+                    p {
+                        text-align: center;
+                        color: red;
+                      }
+                </code>
+
+                <p>El <span>selector de id</span>  utiliza el atributo id de un elemento HTML para seleccionar un elemento específico.</p>
+                <p>El id de un elemento es único dentro de una página, por lo que el selector de id se utiliza para seleccionar un elemento único.</p>
+                <p>Para seleccionar un elemento con un id específico, escribe un carácter de numeral (#), seguido del id del elemento.</p>
+
+                <p><span>Ejemplo:</span></p>
+
+                <p>La regla de CSS que figura a continuación se aplicará al elemento HTML con id="para1":</p>
+
+                <code>
+                    #para1 {
+                        text-align: center;
+                        color: red;
+                      }
+                </code>
+
+                <p>El <span>selector de clase</span> selecciona elementos HTML con un atributo de clase específico.</p>
+
+                <p>Para seleccionar elementos con una clase específica, escribe un punto (.), seguido del nombre de la clase.</p>
+
+                <p><span>Ejemplo:</span></p>
+
+                <p>En este ejemplo, todos los elementos HTML con class="center" serán rojos y estarán alineados en el centro: </p>
+
+                <code>
+                    .center {
+                        text-align: center;
+                        color: red;
+                      }
+                </code>
+
+                <p>El <span>selecor universal</span>(*) selecciona todos los elementos HTML de la página.</p>
+
+                <p><span>Ejemplo:</span></p>
+
+                <p>La regla CSS a continuación afectará a todos los elementos HTML de la página: </p>
+
+                <code>
+                    * {
+                        text-align: center;
+                        color: blue;
+                      }
+                </code>
+
+                <p>El <span>selector de agrupación</span>selecciona todos los elementos HTML con las mismas definiciones de estilo.</p>
+
+                <p>Mira el siguiente código CSS (los elementos h1, h2 y p tienen las mismas definiciones de estilo):</p>
+
+                <code>
+                    h1 {
+                        text-align: center;
+                        color: red;
+                      }
+                      
+                      h2 {
+                        text-align: center;
+                        color: red;
+                      }
+                      
+                      p {
+                        text-align: center;
+                        color: red;
+                      }
+                </code>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="comentarios">
+            <header>Comentarios en CSS</header>
+            <article>
+                <p>Los comentarios se utilizan para explicar el código, y pueden ayudar cuando se edite el código fuente en una fecha posterior.</p>
+
+                <p>Los comentarios son ignorados por los navegadores.</p>
+
+                <p>Un comentario CSS se coloca dentro del elemento "<'style'>", y comienza con /* y termina con */:</p>
+
+                <p><span>Ejemplo:</span></p>
+
+                <code>
+                    /* This is a single-line comment */
+
+                    p {
+                        color: red;
+                      }
+                </code>
+
+                <p>Puedes añadir comentarios donde quieras en el código:</p>
+
+                <p><span>Ejemplo:</span></p>
+
+                <code>
+                    p {
+                        color: red;  /* Set text color to red */
+                      }
+                </code>
+
+                <p>Los comentarios también pueden abarcar varias líneas:</p>
+
+                <p><span>Ejemplo:</span></p>
+
+                <code>
+                    /* This is
+                    a multi-line
+                    comment */
+
+                   p {
+                     color: red;
+                    }
+                </code>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="fondo">
+            <header>Fondos en CSS (Backgrounds)</header>
+            <article>
+                <p>Las propiedades de fondo CSS se utilizan para definir los efectos de fondo de los elementos.</p>
+
+                <p>Aprenderás sobre las siguientes propiedades del fondo CSS:</p>
+
+                <ul>
+                    <li>background-color</li>
+                    <li>background-image</li>
+                </ul>
+                <header> CSS background-color</header>
+
+                <p>La propiedad <span>background-color</span> especifica el color de fondo de un elemento.</p>
+
+                <p><span>Ejemplo:</span></p>
+
+                <p>El color de fondo de una página se establece así:</p>
+
+                <code>
+                    body {
+                        background-color: lightblue;
+                      }
+                </code>
+
+                <p>Con el CSS, un color se especifica más a menudo por:</p>
+
+                <ul>
+                    <li>un nombre de color válido - como "red"</li>
+                    <li>un valor HEX - como "#ff0000"</li>
+                    <li>un valor RGB - como "rgb(255,0,0)"</li>
+                </ul>
+
+                <header>CSS background-image</header>
+
+                <p>La propiedad <span>background-image</span> especifica una imagen para usar como fondo de un elemento.</p>
+
+                <p>Por defecto, la imagen se repite para que cubra todo el elemento.</p>
+
+                <p><span>Ejemplo:</span></p>
+
+                <p>Poner la imagen de fondo de una página: </p>
+
+                <code>
+                    body {
+                        background-image: url("paper.gif");
+                      }
+                </code>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="bordes">
+            <header>Bordes en CSS (Borders)</header>
+
+            <article>
+
+                <p>Las propiedades de borde de CSS te permiten especificar el estilo, el ancho y el color del borde de un elemento.</p>
+
+                <header>CSS Estilo de borde</header>
+
+                <p>La propiedad <span>border-style</span> especifica qué tipo de borde mostrar.</p>
+
+                <ul>
+                    <li><span>dotted</span> - Define un borde punteado</li>
+                    <li><span>dashed</span> - Define un borde de rayas</li>
+                    <li><span>solid</span> - Define un borde sólido</li>
+                    <li><span>double</span - >Define un borde doble</li>
+                    <li><span>groove</span> - Define un borde acanalado en 3D. El efecto depende del valor del color del borde.</li>
+                    <li><span>ridge</span> - Define un borde estriado en 3D. El efecto depende del valor del color del borde.</li>
+                    <li><span>inset</span> - Define un borde insertado en 3D. El efecto depende del valor del color del borde.</li>
+                    <li><span>outset</span> - Define un borde inicial 3D. El efecto depende del valor del color del borde.</li>
+                    <li><span>none</span> - No define ningún borde</li>
+                    <li><span>hidden</span> - Define un borde oculto</li>
+                </ul>
+
+                <p>La propiedad <span>border-style</span> puede tener de uno a cuatro valores (para el borde superior, el borde derecho, el borde inferior y el borde izquierdo).</p>
+
+                <p><span>Ejemplo</span></p>
+
+                <p>Demostración de los diferentes estilos de bordes:</p>
+
+                <code>
+                    p.dotted {border-style: dotted;}
+                    p.dashed {border-style: dashed;}
+                    p.solid {border-style: solid;}
+                    p.double {border-style: double;}
+                    p.groove {border-style: groove;}
+                    p.ridge {border-style: ridge;}
+                    p.inset {border-style: inset;}
+                    p.outset {border-style: outset;}
+                    p.none {border-style: none;}
+                    p.hidden {border-style: hidden;}
+                    p.mix {border-style: dotted dashed solid double;}
+                </code>
+            </article>
+
+        </section>
+    </main>
+    
+</body>
+</html>
